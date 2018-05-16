@@ -24,16 +24,15 @@ phases:
      - tar -xvzf hugo_0.40.3_Linux-64bit.tar.gz
      - mv hugo /usr/bin/
      - rm -f hugo_0.40.3_Linux-64bit.tar.gz
-     - mkdir blog
+     
   build:
     commands:
-      - hugo new site blog
+      - git clone https://github.com/Nandidier/blog_hugo_osones.git
+      - cd blog_hugo_osones
+      - hugo
 
   post_build:
     commands:
-      - cd blog
-      - git clone https://github.com/Nandidier/blog_hugo_osones.git
-      - hugo
       - aws s3 sync ./public s3://$BUCKET_NAME/ --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
 #artifacts:
   #files:
