@@ -28,8 +28,9 @@ phases:
   build:
     commands:
       - git clone https://github.com/Nandidier/blog_hugo_osones.git
-      - hugo new site blog_hugo_osones
-      - cd blog_hugo_osones/
+      - hugo new site blog_osones
+      - mv -r blog_hugo_osones/* blog_osones
+      - cd blog_osones
       - hugo
 
   post_build:
