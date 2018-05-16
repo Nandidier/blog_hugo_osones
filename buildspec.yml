@@ -1,0 +1,45 @@
+version: 0.2
+
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+
+phases:
+  install:
+    commands:
+     - apk update
+     - apk add ca-certificates wget
+     - update-ca-certificates
+     - apk add git
+     - apk add --no-cache --update python3
+     - pip3 install awscli
+     - apk add curl
+  pre_build:
+   commands:
+     - wget https://github.com/gohugoio/hugo/releases/download/v0.40.3/hugo_0.40.3_Linux-64bit.tar.gz
+     - tar -xvzf hugo_0.40.3_Linux-64bit.tar.gz
+     - mv hugo /usr/bin/
+     - rm -f hugo_0.40.3_Linux-64bit.tar.gz
+     - mkdir blog
+  build:
+    commands:
+      - hugo new site blog
+
+  post_build:
+    commands:
+      - cd blog
+      - git clone https://github.com/Nandidier/blog_hugo_osones.git
+      - hugo
+      - aws s3 sync ./public s3://$BUCKET_NAME/ --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
+#artifacts:
+  #files:
+    # - ./public/*
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths
