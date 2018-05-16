@@ -29,7 +29,7 @@ phases:
     commands:
       - git clone https://github.com/Nandidier/blog_hugo_osones.git
       - hugo new site blog_osones
-      - mv blog_hugo_osones/* blog_osones
+      - mv blog_hugo_osones/* blog_osones/
       - cd blog_osones
       - hugo
 
