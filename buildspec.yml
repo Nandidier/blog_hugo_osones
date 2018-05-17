@@ -17,7 +17,7 @@ phases:
      - apk add git
      - apk add --no-cache --update python3
      - pip3 install awscli
-     - apk add curl
+
   pre_build:
    commands:
     - wget https://github.com/gohugoio/hugo/releases/download/v0.40.3/hugo_0.40.3_Linux-64bit.tar.gz
@@ -27,12 +27,12 @@ phases:
      
   build:
     commands:
+      - ls
       #- git clone https://github.com/Nandidier/blog_hugo_osones.git
       #- hugo new site blog_osones
       #- cp -r blog_hugo_osones/* blog_osones/
       #- cd blog_osones
       #- hugo
-       - ls
 
   #post_build:
     #commands:
