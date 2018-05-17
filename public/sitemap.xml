@@ -3,17 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>http://54.72.228.39:1313/posts/new-post/</loc>
+    <lastmod>2018-05-17T09:46:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://54.72.228.39:1313/posts/test/</loc>
+    <lastmod>2018-05-17T09:46:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://54.72.228.39:1313/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>http://54.72.228.39:1313/</loc>
+    <lastmod>2018-05-17T09:46:10+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>http://54.72.228.39:1313/posts/</loc>
+    <lastmod>2018-05-17T09:46:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://54.72.228.39:1313/tags/</loc>
     <priority>0</priority>
   </url>
   

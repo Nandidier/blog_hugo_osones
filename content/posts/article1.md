@@ -4,7 +4,7 @@ thumbnail = "images/default.jpg"
 tags = []
 categories = []
 content = []
-date = "{{ .Date }}"
-title = "{{ replace .TranslationBaseName "-" " " | title }}"
+date = "2018-05-17T11:36:28Z"
+title = "Article1"
 description = ""
 +++
