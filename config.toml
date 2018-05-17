@@ -1,7 +1,0 @@
-baseURL = "/"
-languageCode = "en-us"
-title = "Blog Osones Hugo"
-theme = "hugo_theme_robust"
-
-[permalinks]
-post = "/:filename/"
