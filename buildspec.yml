@@ -31,7 +31,7 @@ phases:
       - hugo new site blog_osones
       - cp -r blog_hugo_osones/* blog_osones/
       - cd blog_osones
-      - hugo
+      - hugo --buildDrafts
 
   post_build:
     commands:
