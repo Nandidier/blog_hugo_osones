@@ -2,3 +2,8 @@ baseURL = "/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "hugo_theme_robust"
+
+[[menu.main]]
+    name = "Posts"
+    weight = 20
+    url = "/posts/"
