@@ -20,10 +20,11 @@ phases:
      - apk add curl
   pre_build:
    commands:
-     - wget https://github.com/gohugoio/hugo/releases/download/v0.40.3/hugo_0.40.3_Linux-64bit.tar.gz
-     - tar -xvzf hugo_0.40.3_Linux-64bit.tar.gz
-     - mv hugo /usr/bin/
-     - rm -f hugo_0.40.3_Linux-64bit.tar.gz
+    # - wget https://github.com/gohugoio/hugo/releases/download/v0.40.3/hugo_0.40.3_Linux-64bit.tar.gz
+    # - tar -xvzf hugo_0.40.3_Linux-64bit.tar.gz
+    # - mv hugo /usr/bin/
+    # - rm -f hugo_0.40.3_Linux-64bit.tar.gz
+      - ls
      
   build:
     commands:
