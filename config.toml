@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Blog Osones Hugo"
 theme = "hugo_theme_robust"
 
 [[menu.main]]
