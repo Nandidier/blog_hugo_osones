@@ -2,8 +2,5 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Blog Osones Hugo"
 theme = "hugo_theme_robust"
-
-[[menu.main]]
-    name = "Posts"
-    weight = 20
-    url = "/posts/"
+[permalinks]
+post = "/:filename/"
