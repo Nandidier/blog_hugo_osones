@@ -27,17 +27,15 @@ phases:
      
   build:
     commands:
-      - ls
-      - pwd
-      #- git clone https://github.com/Nandidier/blog_hugo_osones.git
-      #- hugo new site blog_osones
-      #- cp -r blog_hugo_osones/* blog_osones/
-      #- cd blog_osones
-      #- hugo
+      - cd .. && mkdir blog_osones
+      - hugo new site blog_osones/
+      - mv -R src/* blog_osones/
+      - cd blog_osones
+      - hugo
 
-  #post_build:
-    #commands:
-      #- aws s3 sync ./public s3://$BUCKET_NAME/ --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
+  post_build:
+    commands:
+      - aws s3 sync ./public s3://$BUCKET_NAME/ --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
 #artifacts:
   #files:
     # - ./public/*
