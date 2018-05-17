@@ -29,7 +29,7 @@ phases:
     commands:
       - cd .. && mkdir blog_osones
       - hugo new site blog_osones/
-      - mv -R src/* blog_osones/
+      - cp -r src/* blog_osones/
       - cd blog_osones
       - hugo
 
