@@ -1,6 +1,6 @@
 +++
 
-thumbnail = "images/default.jpg"
+thumbnail = "images/Osones-logo.png"
 tags = []
 categories = []
 content = []
