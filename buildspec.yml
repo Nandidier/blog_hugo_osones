@@ -14,7 +14,6 @@ phases:
      - apk update
      - apk add ca-certificates wget
      - update-ca-certificates
-     - apk add git
      - apk add --no-cache --update python3
      - pip3 install awscli
 
