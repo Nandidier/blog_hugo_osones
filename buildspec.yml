@@ -35,7 +35,7 @@ phases:
   post_build:
     commands:
       - aws s3 sync ./public s3://$BUCKET_NAME/ --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
-      - aws codepipeline get-pipeline-state --name CodePipeline 
+      - aws codepipeline get-pipeline-state --name blog_hugo_osones 
 #artifacts:
   #files:
     # - ./public/*
